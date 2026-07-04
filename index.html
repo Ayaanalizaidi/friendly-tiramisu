@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRUVILON Inspection & Consultancy LLP</title>
+  <meta name="description" content="TRUVILON provides third-party inspection, testing coordination, auditing and compliance solutions for textile, garment, home furnishing and consumer products." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1B3A6B;
+      --navy-dark: #102647;
+      --navy-light: #2a5299;
+      --blue-accent: #1e56a0;
+      --white: #ffffff;
+      --light-bg: #f5f8ff;
+      --gray: #6b7280;
+      --light-gray: #e5e7eb;
+      --text-dark: #111827;
+      --text-mid: #374151;
+      --shadow: 0 4px 20px rgba(27,58,107,0.12);
+      --shadow-lg: 0 10px 40px rgba(27,58,107,0.18);
+      --radius: 8px;
+      --radius-lg: 16px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    /* ==================== NAVBAR ==================== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid var(--light-gray);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .nav-logo img { height: 44px; width: 44px; object-fit: contain; }
+    .nav-logo-text {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--navy);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: 'Playfair Display', serif;
+    }
+    .nav-logo-sub {
+      font-size: 0.62rem;
+      color: var(--gray);
+      font-weight: 500;
+      display: block;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: -2px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-mid);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-whatsapp:hover { background: #20bc5a; transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      padding: 10px 24px;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { background: var(--navy-dark); box-shadow: var(--shadow); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+      padding: 10px 24px;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { background: var(--navy); color: var(--white); transform: translateY(-1px); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; font-size: 1.5rem; color: var(--navy); }
+    /* ==================== HERO ==================== */
+    #home {
+      padding-top: 72px;
+      background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 50%, #f5f8ff 100%);
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 0 60px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-image-wrap {
+      width: 100%;
+      position: relative;
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .hero-image-fade {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, #f8fafc);
+    }
+    .hero-content {
+      text-align: center;
+      padding: 48px 24px 0;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(27,58,107,0.1);
+      color: var(--navy);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+    .hero-title span { color: var(--blue-accent); }
+    .hero-desc {
+      color: var(--text-mid);
+      font-size: 1.05rem;
+      margin-bottom: 36px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .hero-tagline {
+      display: none; /* hidden in new layout */
+      box-shadow: var(--shadow);
+    }
+    /* ==================== STATS BAR ==================== */
+    .stats-bar {
+      background: var(--navy);
+      color: white;
+      padding: 48px 0;
+    }
+    .stats-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+    .stat-item { text-align: center; }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      font-weight: 400;
+      margin-top: 4px;
+    }
+    /* ==================== SECTIONS ==================== */
+    section { padding: 90px 0; }
+    .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-badge {
+      display: inline-block;
+      background: rgba(27,58,107,0.08);
+      color: var(--navy);
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .section-desc {
+      color: var(--gray);
+      font-size: 1rem;
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 52px;
+    }
+    /* ==================== SERVICES ==================== */
+    #services { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .service-card {
+      background: var(--light-bg);
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--navy), var(--blue-accent));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, var(--navy), var(--blue-accent));
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+      color: white;
+      font-size: 1.4rem;
+    }
+    .service-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+    /* ==================== INDUSTRIES ==================== */
+    #industries { background: var(--light-bg); }
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .industry-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 24px;
+      text-align: center;
+      border: 1px solid var(--light-gray);
+      transition: all 0.2s;
+    }
+    .industry-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--navy); }
+    .industry-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      display: block;
+      color: var(--navy);
+    }
+    .industry-title {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .industry-desc { font-size: 0.85rem; color: var(--gray); }
+    /* ==================== WHY CHOOSE ==================== */
+    #why { background: var(--navy); }
+    .why-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 700px;
+      align-items: center;
+    }
+    .why-left .section-title { color: white; }
+    .why-left .section-desc { color: rgba(255,255,255,0.75); }
+    .why-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .why-check {
+      width: 28px; height: 28px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: white;
+      font-size: 0.8rem;
+    }
+    .why-item-title { font-weight: 600; color: white; margin-bottom: 4px; }
+    .why-item-desc { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+    .why-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .why-stat-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .why-stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .why-stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.65); }
+    /* ==================== PROCESS ==================== */
+    #process { background: var(--white); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--navy), var(--blue-accent));
+    }
+    .process-step { text-align: center; position: relative; }
+    .step-number {
+      width: 72px; height: 72px;
+      background: var(--navy);
+      color: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0 auto 16px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 4px 16px rgba(27,58,107,0.35);
+    }
+    .step-title { font-weight: 700; color: var(--navy); margin-bottom: 8px; font-size: 0.92rem; }
+    .step-desc { font-size: 0.82rem; color: var(--gray); line-height: 1.5; }
+    /* ==================== CONTACT ==================== */
+    #contact { background: var(--light-bg); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .contact-info p { color: var(--gray); line-height: 1.7; margin-bottom: 32px; }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .contact-detail-icon {
+      width: 42px; height: 42px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: white;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .contact-detail a { color: var(--navy); text-decoration: none; font-weight: 500; }
+    .contact-detail a:hover { text-decoration: underline; }
+    .contact-form {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-size: 0.87rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius);
+      font-size: 0.92rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(27,58,107,0.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit { width: 100%; padding: 14px; font-size: 1rem; }
+    .success-msg {
+      display: none;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      padding: 14px 20px;
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+    /* ==================== FOOTER ==================== */
+    footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.8);
+      padding: 60px 0 30px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand img { height: 48px; margin-bottom: 12px; }
+    .footer-brand-name { font-size: 1.1rem; font-weight: 700; color: white; margin-bottom: 4px; }
+    .footer-brand-sub { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .footer-brand p { font-size: 0.88rem; line-height: 1.7; }
+    .footer-col h4 { font-size: 0.9rem; font-weight: 700; color: white; margin-bottom: 16px; letter-spacing: 0.05em; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.87rem; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+    .footer-tagline {
+      display: flex;
+      gap: 24px;
+    }
+    .tagline-dot { color: rgba(255,255,255,0.4); }
+    /* ==================== CHATBOT ==================== */
+    .chat-toggle {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 60px; height: 60px;
+      background: var(--navy);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(27,58,107,0.45);
+      z-index: 2000;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+    }
+    .chat-toggle:hover { background: var(--navy-dark); transform: scale(1.08); }
+    .chat-window {
+      position: fixed;
+      bottom: 104px; right: 28px;
+      width: 360px;
+      height: 480px;
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 16px 60px rgba(0,0,0,0.2);
+      z-index: 1999;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .chat-window.open { display: flex; }
+    .chat-header {
+      background: var(--navy);
+      color: white;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .chat-avatar {
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .chat-header-info { flex: 1; }
+    .chat-header-name { font-weight: 700; font-size: 0.95rem; }
+    .chat-header-status { font-size: 0.75rem; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 4px; }
+    .status-dot { width: 7px; height: 7px; background: #34d399; border-radius: 50%; display: inline-block; }
+    .chat-close { background: none; border: none; color: white; cursor: pointer; font-size: 1.1rem; opacity: 0.8; }
+    .chat-close:hover { opacity: 1; }
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .chat-msg { display: flex; gap: 8px; max-width: 85%; }
+    .chat-msg.user { align-self: flex-end; flex-direction: row-reverse; }
+    .chat-msg-text {
+      background: var(--light-bg);
+      border-radius: 12px 12px 12px 0;
+      padding: 10px 14px;
+      font-size: 0.87rem;
+      line-height: 1.5;
+      color: var(--text-dark);
+    }
+    .chat-msg.user .chat-msg-text {
+      background: var(--navy);
+      color: white;
+      border-radius: 12px 12px 0 12px;
+    }
+    .chat-msg-avatar {
+      width: 28px; height: 28px;
+      background: var(--navy);
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem;
+      color: white;
+      margin-top: auto;
+    }
+    .chat-msg.user .chat-msg-avatar { background: var(--blue-accent); }
+    .typing-indicator { display: flex; gap: 4px; padding: 10px 14px; }
+    .typing-dot {
+      width: 8px; height: 8px;
+      background: var(--gray);
+      border-radius: 50%;
+      animation: typing 1.2s infinite;
+    }
+    .typing-dot:nth-child(2) { animation-delay: 0.3s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.6s; }
+    @keyframes typing { 0%,80%,100% { transform: scale(0.8); opacity: 0.4; } 40% { transform: scale(1.1); opacity: 1; } }
+    .chat-input-area {
+      padding: 14px 16px;
+      border-top: 1px solid var(--light-gray);
+      display: flex;
+      gap: 10px;
+    }
+    .chat-input {
+      flex: 1;
+      border: 1px solid var(--light-gray);
+      border-radius: 50px;
+      padding: 10px 16px;
+      font-size: 0.87rem;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .chat-input:focus { border-color: var(--navy); }
+    .chat-send {
+      width: 40px; height: 40px;
+      background: var(--navy);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .chat-send:hover { background: var(--navy-dark); }
+    /* ==================== MOBILE ==================== */
+    @media (max-width: 900px) {
+      .hero-title { font-size: 2rem; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .industries-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-inner { grid-template-columns: 1fr; }
+      
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .process-steps::before { display: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .chat-window { width: calc(100vw - 40px); right: 20px; }
+    }
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .industries-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .contact-form { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <img src="images/logo.png" alt="TRUVILON Logo" />
+      <div>
+        <span class="nav-logo-text">TRUVILON</span>
+        <span class="nav-logo-sub">Inspection & Consultancy LLP</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="https://wa.me/919971030836?text=Hello%20TRUVILON%2C%20I%20would%20like%20to%20inquire%20about%20your%20inspection%20services." target="_blank" class="btn-whatsapp" id="waNavBtn" style="display:none;">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:white;" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="#contact" class="btn-primary">Get a Quote</a>
+    </div>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="hero-badge">Global Quality Partner</span>
+      <h1 class="hero-title">
+        Precise Third-Party <span>Inspection</span> Services.
+      </h1>
+      <p class="hero-desc">
+        TRUVILON provides rigorous quality assurance/inspections, testing support/coordination, certification assistance and compliance/auditing support for manufacturers, exporters and global importers.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Request an Inspection</a>
+        <a href="#services" class="btn-outline">Explore Services</a>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="images/banner.png" alt="TRUVILON Banner — Third-Party Inspection, Testing Coordination, Auditing & Compliance" />
+      <div class="hero-image-fade"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stat-item">
+      <span class="stat-number">500+</span>
+      <span class="stat-label">Inspections Completed</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">24-48h</span>
+      <span class="stat-label">Report Turnaround</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <span class="section-badge">Our Services</span>
+    <h2 class="section-title">Comprehensive Inspection Solutions</h2>
+    <p class="section-desc">
+      We offer end-to-end quality assurance services across global supply chains, ensuring your products meet international standards before shipment.
+    </p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+        <div class="service-title">On-Site Inspection</div>
+        <p class="service-desc">Factory floor verification with trained inspectors ensuring products meet specification before shipment. We catch defects at the source.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-th-large"></i></div>
+        <div class="service-title">Textile Quality Checking</div>
+        <p class="service-desc">Comprehensive fabric standards verification including fiber content, color fastness, shrinkage, tensile strength, and defect classification.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-tshirt"></i></div>
+        <div class="service-title">Garment / Fabric Inspection</div>
+        <p class="service-desc">Pre-shipment and in-line inspection for apparel including AQL sampling, measurement checks, workmanship, and packaging compliance.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-home"></i></div>
+        <div class="service-title">Home Textile / Consumer Products</div>
+        <p class="service-desc">End-product compliance verification for home furnishings, soft goods, and consumer products including safety standard checks.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="service-title">Support Auditing & Compliance</div>
+        <p class="service-desc">Factory social audits, quality management system verification, and regulatory compliance support for global brands and importers.</p>
+      </div>
+      <div class="service-card" style="background: #e8f2ff; border: 1.5px solid #c5d8f8;">
+        <div class="service-icon" style="background: linear-gradient(135deg, #2a6dd9, #1e56a0);"><i class="fas fa-globe" style="color: white;"></i></div>
+        <div class="service-title" style="color: var(--navy);">Testing Coordination</div>
+        <p class="service-desc" style="color: var(--gray);">End-to-end testing coordination with accredited labs worldwide. We manage the process from sample submission to certified results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="section-inner">
+    <span class="section-badge">Industries We Serve</span>
+    <h2 class="section-title">Built for Global Supply Chains</h2>
+    <p class="section-desc">Our inspectors have deep domain expertise across four major manufacturing verticals.</p>
+    <div class="industries-grid">
+      <div class="industry-card">
+        <i class="fas fa-layer-group industry-icon"></i>
+        <div class="industry-title">Textiles</div>
+        <p class="industry-desc">Yarns, fabrics, technical textiles, and raw materials across all fiber types.</p>
+      </div>
+      <div class="industry-card">
+        <i class="fas fa-tshirt industry-icon"></i>
+        <div class="industry-title">Garments</div>
+        <p class="industry-desc">Apparel, fashion, sportswear, workwear, and accessories inspection.</p>
+      </div>
+      <div class="industry-card">
+        <i class="fas fa-couch industry-icon"></i>
+        <div class="industry-title">Home Furnishings</div>
+        <p class="industry-desc">Bedding, upholstery, curtains, carpets, and home textile products.</p>
+      </div>
+      <div class="industry-card">
+        <i class="fas fa-box-open industry-icon"></i>
+        <div class="industry-title">Consumer Products</div>
+        <p class="industry-desc">Toys, gifts, personal care products, and general merchandise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why" style="padding: 90px 0;">
+  <div class="why-inner">
+    <div class="why-left">
+      <span class="section-badge" style="background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9);">Why TRUVILON</span>
+      <h2 class="section-title">Your Quality Assurance Partner</h2>
+      <p class="section-desc">We combine technical expertise with global reach to protect your brand reputation and ensure supply chain excellence.</p>
+      <ul class="why-list">
+        <li class="why-item">
+          <div class="why-check"><i class="fas fa-check"></i></div>
+          <div>
+            <div class="why-item-title">Qualified Inspectors</div>
+            <div class="why-item-desc">Certified professionals with 10+ years of industry experience across textiles and consumer products.</div>
+          </div>
+        </li>
+        <li class="why-item">
+          <div class="why-check"><i class="fas fa-check"></i></div>
+          <div>
+            <div class="why-item-title">24-48 Hour Reporting</div>
+            <div class="why-item-desc">Detailed digital inspection reports with photos delivered within 24-48 hours of inspection.</div>
+          </div>
+        </li>
+
+        <li class="why-item">
+          <div class="why-check"><i class="fas fa-check"></i></div>
+          <div>
+            <div class="why-item-title">International Standards</div>
+            <div class="why-item-desc">Aligned with ISO, AQL, OEKO-TEX, REACH, and other international quality and compliance frameworks.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-inner">
+    <span class="section-badge">How It Works</span>
+    <h2 class="section-title">Simple 5-Step Inspection Process</h2>
+    <p class="section-desc">From inquiry to certified report — we make quality assurance simple, fast, and reliable.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <div class="step-title">Submit Inquiry</div>
+        <p class="step-desc">Fill out our contact form with your product type, factory location, and inspection requirements.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <div class="step-title">Scope & Quote</div>
+        <p class="step-desc">Our team reviews your needs and provides a detailed inspection scope and competitive quote within 24 hours.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <div class="step-title">Inspector Assigned</div>
+        <p class="step-desc">A qualified inspector in your supplier's region is assigned and coordinates directly with the factory.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">4</div>
+        <div class="step-title">On-Site Inspection</div>
+        <p class="step-desc">Detailed inspection conducted per agreed checklist using AQL or custom sampling methodology.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">5</div>
+        <div class="step-title">Certified Report</div>
+        <p class="step-desc">Comprehensive digital report with photos and pass/fail status delivered within 24-48 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <span class="section-badge">Get in Touch</span>
+    <h2 class="section-title">Request an Inspection</h2>
+    <p class="section-desc">Ready to protect your product quality? Reach out and our team will get back to you within 24 hours.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>We Are Here to Help</h3>
+        <p>Whether you need a one-time pre-shipment inspection or an ongoing quality program, TRUVILON has the expertise to protect your brand.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fas fa-globe"></i></div>
+          <div><strong>Website</strong><br/><a href="https://www.truvilon.com" target="_blank">www.truvilon.com</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+          <div><strong>Email</strong><br/><a href="mailto:Info@truvilon.com">Info@truvilon.com</a><br/><a href="mailto:Support@truvilon.com">Support@truvilon.com</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><i class="fab fa-linkedin-in"></i></div>
+          <div><strong>LinkedIn</strong><br/><a href="https://www.linkedin.com" target="_blank">Follow TRUVILON</a></div>
+        </div>
+        <div style="margin-top: 32px; background: rgba(27,58,107,0.06); border-radius: var(--radius-lg); padding: 20px 24px; border-left: 3px solid var(--navy);">
+          <strong style="color: var(--navy);">Inspect. Verify. Consult.</strong>
+          <p style="margin-top: 6px; font-size: 0.87rem; color: var(--gray); margin-bottom: 0;">Trusted third-party inspection services for global importers and brands.</p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="success-msg" id="successMsg">
+          <i class="fas fa-check-circle"></i> Thank you! Your message has been received. We will contact you within 24 hours.
+        </div>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" placeholder="john@company.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+1 234 567 8900" />
+            </div>
+            <div class="form-group">
+              <label>Company Name</label>
+              <input type="text" placeholder="Your Company Ltd." />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Service Required</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>On-Site Inspection</option>
+              <option>Textile Quality Checking</option>
+              <option>Garment / Fabric Inspection</option>
+              <option>Home Textile / Consumer Products Inspection</option>
+              <option>Support Auditing & Compliance</option>
+              <option>Testing Coordination</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message *</label>
+            <textarea placeholder="Tell us about your inspection requirements — product type, factory location, timeline..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="TRUVILON Logo" />
+        <div class="footer-brand-name">TRUVILON</div>
+        <div class="footer-brand-sub">Inspection & Consultancy LLP</div>
+        <p>Third-party inspection, testing coordination, auditing and compliance solutions for global supply chains.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">On-Site Inspection</a></li>
+          <li><a href="#services">Textile Quality Checking</a></li>
+          <li><a href="#services">Garment / Fabric Inspection</a></li>
+          <li><a href="#services">Home Textile Inspection</a></li>
+          <li><a href="#services">Testing/Certification/Auditing/Compliance Related Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <ul class="footer-links">
+          <li><a href="#industries">Textiles</a></li>
+          <li><a href="#industries">Garments</a></li>
+          <li><a href="#industries">Home Furnishings</a></li>
+          <li><a href="#industries">Consumer Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:Info@truvilon.com">Info@truvilon.com</a></li>
+          <li><a href="mailto:Support@truvilon.com">Support@truvilon.com</a></li>
+          <li><a href="https://www.truvilon.com">www.truvilon.com</a></li>
+          <li><a href="#contact">Get a Quote</a></li>
+          <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 TRUVILON Inspection & Consultancy LLP. All rights reserved.</div>
+      <div class="footer-tagline">
+        <span>Inspect</span><span class="tagline-dot">&bull;</span>
+        <span>Verify</span><span class="tagline-dot">&bull;</span>
+        <span>Consult</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a
+  href="https://wa.me/919971030836?text=Hello%20TRUVILON%2C%20I%20would%20like%20to%20inquire%20about%20your%20inspection%20services."
+  target="_blank"
+  id="waFloat"
+  title="Chat on WhatsApp"
+  style="position:fixed;bottom:100px;right:28px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.45);z-index:2000;transition:all 0.2s;text-decoration:none;"
+  onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 28px rgba(37,211,102,0.6)'"
+  onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,211,102,0.45)'"
+>
+  <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:white;" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- CHATBOT BUTTON -->
+<button class="chat-toggle" onclick="toggleChat()" id="chatToggle">
+  <i class="fas fa-comment-dots"></i>
+</button>
+
+<!-- CHATBOT WINDOW -->
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-avatar"><i class="fas fa-robot"></i></div>
+    <div class="chat-header-info">
+      <div class="chat-header-name">TRUVILON Assistant</div>
+      <div class="chat-header-status"><span class="status-dot"></span> Online</div>
+    </div>
+    <button class="chat-close" onclick="toggleChat()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg">
+      <div class="chat-msg-avatar"><i class="fas fa-robot" style="font-size:0.6rem;"></i></div>
+      <div class="chat-msg-text">Hello! 👋 Welcome to TRUVILON. Ask me about our services, industries, process, or how to get a quote!</div>
+    </div>
+  </div>
+  <div class="chat-input-area">
+    <input type="text" class="chat-input" id="chatInput" placeholder="Ask about our services..." onkeypress="handleChatKey(event)" />
+    <button class="chat-send" onclick="sendChat()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<script>
+  function toggleChat() {
+    var win = document.getElementById('chatWindow');
+    win.classList.toggle('open');
+    var btn = document.getElementById('chatToggle');
+    btn.innerHTML = win.classList.contains('open') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-comment-dots"></i>';
+  }
+
+  var SHEET_URL = "https://script.google.com/macros/s/AKfycbx2O4YbW5fi4DO2ijsm4ZBh_UjWeVCeXrOUH2ucLiTbtnh0md4nHhF84-146uujjUPNeQ/exec";
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    var data = {
+      name: form.querySelector('input[type="text"]').value,
+      email: form.querySelector('input[type="email"]').value,
+      phone: form.querySelector('input[type="tel"]').value,
+      company: form.querySelectorAll('input[type="text"]')[1].value,
+      service: form.querySelector('select').value,
+      message: form.querySelector('textarea').value,
+      timestamp: new Date().toLocaleString('en-IN', {timeZone: 'Asia/Kolkata'})
+    };
+    fetch(SHEET_URL, {
+      method: 'POST', mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    }).then(function() {
+      document.getElementById('successMsg').style.display = 'block';
+      form.reset(); btn.disabled = false; btn.textContent = 'Send Message';
+      setTimeout(function() { document.getElementById('successMsg').style.display = 'none'; }, 6000);
+    }).catch(function() {
+      document.getElementById('successMsg').style.display = 'block';
+      form.reset(); btn.disabled = false; btn.textContent = 'Send Message';
+      setTimeout(function() { document.getElementById('successMsg').style.display = 'none'; }, 6000);
+    });
+  }
+
+  function handleChatKey(e) { if (e.key === 'Enter') sendChat(); }
+
+  function sendChat() {
+    var input = document.getElementById('chatInput');
+    var msg = input.value.trim();
+    if (!msg) return;
+    input.value = '';
+    addChatMsg(msg, 'user');
+    addTypingIndicator();
+    setTimeout(function() {
+      removeTypingIndicator();
+      addChatMsg(getReply(msg), 'bot');
+    }, 600 + Math.random() * 400);
+  }
+
+  function getReply(msg) {
+    var m = msg.toLowerCase();
+
+    if (m.match(/\b(hi|hello|hey|namaste|hii|helo|good morning|good evening)\b/))
+      return "Hello! 👋 Welcome to TRUVILON Inspection & Consultancy LLP. How can I assist you today? You can ask me about our services, industries we serve, or how to get a quote!";
+
+    if (m.match(/service|what do you|what you do|offer|capabilities|kya karte|kya hai|kya offer/))
+      return "We offer 6 core services:\n\n1. 🔍 On-Site Inspection\n2. 🧵 Textile Quality Checking\n3. 👗 Garment / Fabric Inspection\n4. 🏠 Home Textile & Consumer Products\n5. ✅ Auditing & Compliance Support\n6. 🧪 Testing Coordination\n\nWould you like details on any specific service?";
+
+    if (m.match(/garment|cloth|fabric|apparel|shirt|fashion|dress|kpda|kapda|clothing|wear/))
+      return "Our Garment & Fabric Inspection covers:\n\n• Pre-shipment & in-line inspections\n• AQL sampling methodology\n• Measurement & workmanship checks\n• Packaging compliance\n\nContact Info@truvilon.com or fill the contact form for a quote! 📋";
+
+    if (m.match(/textile|yarn|fiber|fibre|cotton|wool|silk|knit|weave|thread/))
+      return "Our Textile Quality Checking covers:\n\n• Fiber content verification\n• Color fastness & shrinkage tests\n• Tensile strength checks\n• Defect classification\n\nWe work with all major fiber types and international standards!";
+
+    if (m.match(/home|furnish|bedding|curtain|carpet|sofa|upholster|pillow|blanket|cushion/))
+      return "We inspect Home Textiles & Consumer Products including:\n\n• Bedding, curtains & carpets\n• Upholstery & soft furnishings\n• Safety standard compliance checks\n\nContact us at Info@truvilon.com for more details!";
+
+    if (m.match(/audit|compliance|social|regulation|standard|iso|aql|oeko|reach/))
+      return "Our Auditing & Compliance services include:\n\n• Factory social audits\n• Quality management system (QMS) verification\n• Standards: ISO, AQL, OEKO-TEX, REACH\n\nWe help you stay compliant with global requirements!";
+
+    if (m.match(/test|lab|certif|accredit|testing/))
+      return "Our Testing Coordination service manages:\n\n• Sample submission to accredited labs\n• Worldwide lab network\n• Certified results delivered to you\n\nContact Info@truvilon.com to get started!";
+
+    if (m.match(/inspect|quality|check|verify|qc|pre.?shipment|psi|dpi|on.?site/))
+      return "TRUVILON provides on-site inspections including:\n\n• Pre-Shipment Inspection (PSI)\n• During Production Inspection (DPI)\n• Factory Audits\n\n500+ inspections done with 24-48 hour report turnaround! Request a quote using the contact form.";
+
+    if (m.match(/contact|email|phone|reach|call|whatsapp|number|connect|detail/))
+      return "You can reach TRUVILON here:\n\n📧 Info@truvilon.com\n📧 Support@truvilon.com\n💬 WhatsApp: +91 9971030836\n🌐 www.truvilon.com\n\nOr fill the contact form on this page — we respond within 24 hours!";
+
+    if (m.match(/price|cost|quote|fee|rate|charge|how much|kitna|pricing/))
+      return "Our pricing is customized based on:\n\n• Service type & scope\n• Factory location\n• Product category\n\nPlease fill the contact form or email Info@truvilon.com for a competitive quote. We respond within 24 hours! ✅";
+
+    if (m.match(/report|turnaround|time|how long|kitne din|delivery|fast/))
+      return "📄 Inspection reports are delivered within 24-48 hours of inspection. Reports include:\n\n• Detailed findings with photos\n• Pass/Fail status\n• AQL results\n• Recommendations\n\nFast, reliable, and digital delivery!";
+
+    if (m.match(/industry|sector|field|kaunsa|industries/))
+      return "We serve 4 major industries:\n\n🧵 Textiles — yarns, fabrics, technical textiles\n👗 Garments — apparel, sportswear, accessories\n🛋️ Home Furnishings — bedding, carpets, curtains\n📦 Consumer Products — toys, gifts, merchandise";
+
+    if (m.match(/process|how does it work|step|kaise|procedure/))
+      return "Our simple 5-step process:\n\n1️⃣ Submit inquiry via contact form\n2️⃣ Receive scope & quote within 24 hrs\n3️⃣ Inspector assigned in your region\n4️⃣ On-site inspection conducted\n5️⃣ Certified report in 24-48 hrs\n\nSimple, fast, and reliable! 🚀";
+
+    if (m.match(/why|choose|best|trust|experience|qualified|better/))
+      return "Why choose TRUVILON? ✅\n\n• Qualified inspectors with 10+ years experience\n• 500+ inspections completed\n• 24-48 hour report delivery\n• ISO, AQL, OEKO-TEX, REACH aligned\n• Global coverage with local expertise";
+
+    if (m.match(/consumer|product|toy|gift|merchandise|general/))
+      return "We inspect Consumer Products including:\n\n• Toys & gifts\n• Personal care products\n• General merchandise\n• Safety & compliance checks\n\nContact Info@truvilon.com for a tailored quote!";
+
+    if (m.match(/thank|thanks|shukriya|dhanyawad|ok|okay|great|perfect/))
+      return "You're welcome! 😊 Feel free to ask anything else. For specific inquiries, contact Info@truvilon.com or WhatsApp +91 9971030836. Have a great day!";
+
+    return "Thanks for your message! 😊 TRUVILON specializes in:\n\n• Third-party inspection\n• Testing coordination\n• Auditing & compliance\n\nYou can ask about services, pricing, industries, or our process. For direct help, email Info@truvilon.com or WhatsApp +91 9971030836!";
+  }
+
+  function addChatMsg(text, type) {
+    var msgs = document.getElementById('chatMessages');
+    var div = document.createElement('div');
+    div.className = 'chat-msg ' + (type === 'user' ? 'user' : '');
+    div.innerHTML = '<div class="chat-msg-avatar"><i class="fas fa-' + (type === 'user' ? 'user' : 'robot') + '" style="font-size:0.6rem;"></i></div><div class="chat-msg-text">' + text.replace(/\n/g, '<br/>') + '</div>';
+    msgs.appendChild(div);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+
+  function addTypingIndicator() {
+    var msgs = document.getElementById('chatMessages');
+    var div = document.createElement('div');
+    div.className = 'chat-msg'; div.id = 'typingIndicator';
+    div.innerHTML = '<div class="chat-msg-avatar"><i class="fas fa-robot" style="font-size:0.6rem;"></i></div><div class="chat-msg-text typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
+    msgs.appendChild(div); msgs.scrollTop = msgs.scrollHeight;
+  }
+
+  function removeTypingIndicator() {
+    var t = document.getElementById('typingIndicator');
+    if (t) t.remove();
+  }
+</script>
+</body>
+</html>
